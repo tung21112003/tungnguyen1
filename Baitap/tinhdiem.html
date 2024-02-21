@@ -15,21 +15,22 @@
     Môn Anh <input type="text" style="width: 75px;" id="anh">
     <br> <br>
      Khu Vực <select name="Khu Vực" id="kv" style="width: 75px;">
-        <option value="">KV1</option>
-        <option value="">KV2</option>
-        <option value="">KV2-NT</option>
-        <option value="">KV3</option>
+        <option value="0.75">KV1</option>
+        <option value="0.5" >KV2</option>
+        <option value="0.25" >KV2-NT</option>
+        <option value="0" >KV3</option>
     </select>
     <br><br>
     <button onclick="tinhtoan()">Tính điểm </button>
     <p id="Diem"></p>
     <script>
         function tinhtoan(){
+           
             let toan = +document.getElementById("toan").value;
             let van = +document.getElementById("van").value;
             let anh = +document.getElementById("anh").value;
             let kv = +document.getElementById("kv").value;
-            tong = toan + van + anh + kv ;
+            tong = toan + van + anh + kv  ;
             document.getElementById("Diem").innerHTML=+tong;
         }
     </script>
