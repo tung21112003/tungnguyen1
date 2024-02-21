@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td style="width: 200px;"> <center>Amount</center></td>
+            <td style="width: 200px;"> <center>From Cerrency</center></td>
+            <td style="width: 200px;"><center>To Cerrency</center></td>
+        </tr>
+        <tr>
+            <td><center><input type="text" name="Amount" id="NhapTien"></center></td>
+            <td><center><select name="From Cerrency" id="National1">
+                <option value="1">VietNam</option>
+                <option value="24875">My</option>
+                <option value="165">NhatBan</option>
+            </select></center></td>
+            <td><center><select name="From Cerrency" id="National2">
+                <option value="1">VietNam</option>
+                <option value="24875">My</option>
+                <option value="165">NhatBan</option>
+            </select></center></td>
+            <td onclick="nut()"><button style="color: blueviolet; ">convert</button></td>
+        </tr>
+        <tr ><button onclick="datlai()">Dat Lai</button></tr>
+     <tr id="n1"></tr>
+    </table>
+    <script>
+        function nut(){
+            let NhapTien = +document.getElementById("NhapTien").value;
+            let National1= +document.getElementById("National1").value;
+            let National2= +document.getElementById("National2").value;
+            Chuyendoi =NhapTien*National1/National2;
+            document.getElementById("n1").innerHTML="Result:"+Chuyendoi;
+        }
+        function datlai(){
+            document.getElementById("NhapTien").value="";
+            document.getElementById("National1").value=1;
+            document.getElementById("National2").value=1;
+            document.getElementById("n1").innerHTML="";
+        }
+    </script>
+</body>
+</html>

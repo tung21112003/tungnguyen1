@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" id="month">
+    <button onclick="nut1()">tính số này</button>
+    <p id="hienthikq1"></p>
+    <br>   
+    <script>
+        function nut1(){
+        let month= document.getElementById("month").value;
+        if(month==1||month==3||month==5||month==7||month==9||month==11){
+            document.getElementById("hienthikq1").innerHTML="tháng" + month+ "có 31 ngày"}
+        else if(month==2){
+           document.getElementById("hienthikq1").innerHTML="tháng" + month+ " có 28 hoặc 29 ngày "
+        }
+    }
+    </script>
+</body>
+</html>
