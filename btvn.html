@@ -6,45 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <center>
-      
-    <table>
-        <tr>
-            <th colspan="2" style="background-color: coral;color: white;">Sở thích của bạn</th>
-        </tr>    
-            <tr style="color: blue;">
-                <td>Họ và tên</td>
-                <td><input type="text"></td>
-            </tr>    
-            <tr style="color: blue;">
-                <td>Email</td>
-                <td><input type="text"></td>
-            </tr>
-            <tr style="color: blue;">
-                <td>Sở thích</td>
-                <td><table>
-                  <tr style="color: blueviolet;">
-                    <td><input type="checkbox" name="" id="">Thể thao</td>
-                    <td><input type="checkbox" name="" id="">Âm nhạc</td>
-                    <td><input type="checkbox" name="" id="">Đọc sách</td>
-                </tr>
-                <tr style="color: brown;">
-                    <td><input type="checkbox" name="" id="">Lướt web</td>
-                    <td><input type="checkbox" name="" id="">Chơi game</td>
-                    <td><input type="checkbox" name="" id="">Điện ảnh</td>
-                </tr>
-                <tr style="color: gold;">
-                    <td><input type="checkbox" name="" id="">Du lịch</td>
-                </tr>
-                </table></td>
-                </tr>
-           <tr>
-             <td></td>
-            <td><button>Gửi thông tin</button><button>Nhập lại</button></td>
-            </tr>
-
-     </table>
-    </center>
-    
+    <h1>Giá hoa quả</h1>
+    <input type="text" id="hoaqua">
+    <button onclick="xemgia()">Xem Giá</button>
+    <p id="giatien"></p>
+    <script>
+        function xemgia(){
+            let xemgia = document.getElementById("hoaqua").value;
+            if(xemgia =='ổi'||xemgia == 'dưa hấu'){
+                document.getElementById("giatien").innerHTML="20000 VND/kg";
+            }
+          
+             else if(xemgia == 'táo'||xemgia == 'xoài'){
+                document.getElementById("giatien").innerHTML="30000 VND/kg";
+            }
+            
+            else  if(xemgia == 'cam'||xemgia == 'chôm chôm'){
+                document.getElementById("giatien").innerHTML="40000 VND/kg";
+            }
+            else if(xemgia = 'măng cụt'){
+                document.getElementById("giatien").innerHTML="50000 VND/kg";
+            }
+        }
+    </script>
 </body>
 </html>
