@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="daipho">
+        <input id="txt_nam" placeholder="Nhập năm. Ví dụ: 2021" />
+        <input type="button" id="cmd_tinh" value="Tính toán" onclick="daipho_namamlich();" />
+        <p>Năm âm lịch là: <span id="ketqua"></span></p>
+        </form>
+        <script>
+            function daipho_namamlich()
+{
+	var x = document.getElementById("txt_nam");
+	var thiencan = [ "Canh", "Tân", "Nhâm", "Quý", "Giáp", "Ất", "Bính", "Đinh", "Mậu", "Kỷ" ];
+	var diachi = [ "Thân", "Dậu", "Tuấn", "Hợi", "Tý", "Sửu", "Dần", "Mẹo", "Thìn", "Tỵ", "Ngọ", "Mùi" ];
+
+	var nam = x.value;
+	var namamlich = thiencan[ nam % 10 ] + " " + diachi[ nam % 12 ];
+
+	document.getElementById("ketqua").innerText = namamlich;
+}
+        </script>
+</body>
+</html>
