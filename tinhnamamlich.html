@@ -6,22 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <form id="daipho">
-        <input id="txt_nam" placeholder="Nhập năm. Ví dụ: 2021" />
-        <input type="button" id="cmd_tinh" value="Tính toán" onclick="daipho_namamlich();" />
-        <p>Năm âm lịch là: <span id="ketqua"></span></p>
-        </form>
+        <input id="txt_nam" placeholder="Nhập năm" />
+        <button onclick="daipho_namamlich()">Tính toán</button>
+        <p id="ketqua">Năm âm lịch là  </p>
         <script>
             function daipho_namamlich()
 {
-	var x = document.getElementById("txt_nam");
-	var thiencan = [ "Canh", "Tân", "Nhâm", "Quý", "Giáp", "Ất", "Bính", "Đinh", "Mậu", "Kỷ" ];
-	var diachi = [ "Thân", "Dậu", "Tuấn", "Hợi", "Tý", "Sửu", "Dần", "Mẹo", "Thìn", "Tỵ", "Ngọ", "Mùi" ];
+	let nam = +document.getElementById("txt_nam").value;
+	let thiencan = [ "Canh", "Tân", "Nhâm", "Quý", "Giáp", "Ất", "Bính", "Đinh", "Mậu", "Kỷ" ];
+	let diachi = [ "Thân", "Dậu", "Tuấn", "Hợi", "Tý", "Sửu", "Dần", "Mẹo", "Thìn", "Tỵ", "Ngọ", "Mùi" ];
 
-	var nam = x.value;
-	var namamlich = thiencan[ nam % 10 ] + " " + diachi[ nam % 12 ];
+	let namamlich = thiencan[ nam % 10 ] + " " + diachi[ nam % 12 ];
 
-	document.getElementById("ketqua").innerText = namamlich;
+	document.getElementById("ketqua").innerHTML = namamlich;
 }
         </script>
 </body>
