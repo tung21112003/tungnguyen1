@@ -6,15 +6,75 @@
     <title>Document</title>
 </head>
 <body>
+ <script>
+    // Declaration and initialization of an array
+ let myColor = ["Red", "Green", "White", "Black"];
 
-    <script>
-        let value = prompt("Enter a number: ");
-        let numbers = [-3, 5, 1, 3, 2, 10];
-        for (let i = 0; i < numbers.length; i++) {
-    if (value == numbers[i]) {
-        alert("Value " + numbers[i] + "found at " + i);
-    }
+// Using the toString method to convert the array to a string
+console.log(myColor.toString());
+
+// Using the default join method to concatenate array elements into a string separated by commas
+console.log(myColor.join());
+
+// Using the join method with a custom separator ('+') to concatenate array elements into a string
+console.log(myColor.join('+'));
+  
+
+// Prompt the user for input and store it in the 'num' variable
+var num = window.prompt();
+
+// Convert the number to a string and store it in the 'str' variable
+var str = num.toString();
+
+// Initialize an array 'result' with the first character of the string
+var result = [str[0]];
+
+// Iterate through the characters of the string starting from index 1
+for (var x = 1; x < str.length; x++) {
+  // Check if the previous and current characters are both even digits
+  if (str[x - 1] % 2 === 0 && str[x] % 2 === 0) {
+    // If both are even, push a '-' and the current character to the 'result' array
+    result.push('-', str[x]);
+  } else {
+    // If not both even, push the current character to the 'result' array
+    result.push(str[x]);
+  }
 }
-    </script>
+
+// Output the joined 'result' array as a string
+console.log(result.join(''));
+  
+
+// Declare and initialize the input string
+var str = 'c';
+
+// Define constants for uppercase and lowercase letters
+var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+
+// Initialize an array to store the result
+var result = [];
+
+// Iterate through each character in the input string
+for (var x = 0; x < str.length; x++) {
+  // Check if the current character is an uppercase letter
+  if (UPPER.indexOf(str[x]) !== -1) {
+    // Convert the uppercase letter to lowercase and add it to the result array
+    result.push(str[x].toLowerCase());
+  }
+  // Check if the current character is a lowercase letter
+  else if (LOWER.indexOf(str[x]) !== -1) {
+    // Convert the lowercase letter to uppercase and add it to the result array
+    result.push(str[x].toUpperCase());
+  }
+  // If the current character is neither uppercase nor lowercase, add it to the result array as is
+  else {
+    result.push(str[x]);
+  }
+}
+
+// Output the joined result array as a string
+console.log(result.join(''));
+ </script>
 </body>
 </html>
