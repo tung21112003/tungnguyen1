@@ -6,21 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <script>let userName = prompt("Who's there?", '');
-    if (userName == 'Admin') {
-        let pass = prompt('Password?', '');
-} else if (userName == null) {
-    alert('Canceled');
-} else {
-    alert("I don't know you");
-}
-if (pass == 'TheMaster') {
-    alert('Welcome!');
-} else if (pass == null) {
-    alert('Canceled.');
-} else {
-    alert('Wrong password');
-}
-    </script>
+     <script>
+        let numbers = [-3, 5, 1, 3, 2, 10];
+        let max = numbers[0];
+        let index = 0;
+        for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+        max = numbers[i];
+        index = i;
+    }
+}  
+alert("max: " + max + " at position " + index);
+     </script>
 </body>
+</html>
 </html>
