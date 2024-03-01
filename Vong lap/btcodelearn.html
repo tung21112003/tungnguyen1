@@ -7,14 +7,24 @@
 </head>
 <body>
     <script>
-        let a = +prompt("nhap a: ");
-        let b = +prompt("nhap b: ");
-        let tong = 0;
-        for(i=a;i<=b;i++){
-          tong+=i;
+        for (a = 1; a <= 5; a++) {
+            for (b = 1; b <= 5; b++) {
+                    if (a == 1 && b >= 5) {document.write('*');}
+                         else { if (a == 1) {document.write('');}}
+                    if (a == 2 && b >= 4) {document.write('*');} 
+                         else { if (a == 2) {document.write('&#160&#160')}}
+                    if (a == 3 && b >= 3) {document.write('*');} 
+                         else { if (a == 3) {document.write('&#160&#160');}}
+                    if (a == 4 && b >= 2) {document.write('*');} 
+                         else { if (a == 4) {document.write('&#160&#160');}}
+                    if (a == 5 && b >= 1) {document.write('*');} 
+                         else { if (a == 5) {document.write('&#160&#160');}}
+            }
+            document.write('<br>');
         }
-        document.write(tong);
-       
+
+        document.write('<br>');
+
     </script>
 </body>
 </html>
