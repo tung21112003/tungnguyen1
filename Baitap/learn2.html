@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p> Nhap so </p>
+     <input type="text" id="show">
+     <button onclick="kiemtra()">Kiem tra</button>
+     
+     <script>
+        function kiemtra(){
+            let a = document.getElementById("show").value;
+            if( a %2 ==0){
+            alert(a + "La so chan");}
+            else{alert("moi nhap lai");}
+        } 
+        
+     </script>
+</body>
+</html>
