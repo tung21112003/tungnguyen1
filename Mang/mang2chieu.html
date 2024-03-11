@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [
+            [1,2,3,4,5,6],
+            [7,6,9],
+            [55,33,89,42],
+        ]
+        //arr[1] =[7,6,9]
+        //arr[2][3]=42;
+        //arr.length=3;
+        //arr[0].length=5;
+        //............................................
+        // Duyệt mảng 
+        /*
+        for(let i =0;i<=arr.length;i++){
+            document.write(arr[i]+ "<br>");
+          for(let j =0;j<arr[i].length;j++){
+            document.write(arr[i][j]+ " "); // in từng phần tử của phần tử con
+          }
+             document.write("<br>");
+        }
+        */
+       // In ra các phần tử >10
+       /*
+       for(let i =0;i<arr.length;i++){
+        for(let j =0;j<arr[i].length;j++){
+            if(arr[i][j]>10){
+                document.write(arr[i][j] +"" + "<br>");
+            }
+        }
+        document.write("<br>");
+       }
+       */
+      //------------------------------------------------
+      // In ra tổng các phần tử chẵn
+      let tong = 0;
+      for(let i =0 ;i<arr.length;i++){
+        for(let j =0 ;j<arr[i].length;j++){
+            if(arr[i][j]%2==0){
+                tong += arr[i][j];
+            }
+        }
+      }
+      document.write(tong);
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Mảng khai báo là :arr
+
+    -->
+    <script>
+      /*  let arr = [1,3,2,4,5]; // cách khai báo
+        arr[2]=2;// cách  truy xuất
+        for(let i =0 ;i<arr.length;i++){
+            document.write(arr[i]+"<br>");
+        }
+        */
+       //------------------------------------------------------------
+       //tìm max 
+      /* let arr = [2,4,5,8,6,10];
+       let max = arr[0];
+       for(i=0;i<arr.length;i++){
+        if(arr[i]>max){
+              max = arr[i];
+        }
+       }
+       document.write(max +"<br>");
+       */
+      //---------------------------------------------------------------
+      // tìm max thứ 2
+     /* let arr = [2,4,5,3,6,10];
+      let max = arr[0];
+      for(i=0;i<arr.length;i++){
+        if (arr[i-1]>max){
+        max = arr[i-1];
+        }
+    }
+        document.write(max+ "<br>");
+        */
+      //---------------------------------------------------------------
+      //Đếm số lần xuất hiện của từng phần tử trong mảng.
+     /* let arr = [2,4,5,3,6,10];
+      for(i=0;i<arr.length;i++){
+
+      }
+     */
+     //---------------------------------
+     //nhập vào x , in ra vị trí của x trong mảng
+    /* let x = +prompt("nhap vao x: ");
+     let arr = [2,4,6,7,9,50,15];
+     for(i=0;i<arr.length;i++){
+        if(x == arr[i]){
+            document.write(i+"");
+        }
+     }
+     */
+    //------------------------------------------------------------------
+    // Tìm max và vị trí của max
+    let arr = [2,4,5,3,6,10];
+    let max =arr[0];
+    for(i=0;i<arr.length;i++){
+   if(arr[i]>max){
+     max = arr[i];
+   }
+    }
+    document.write(max + " <br>" + "vi tri thu : "+  i + "");
+
+
+
+
+
+
+    </script>
+</body>
+</html>
