@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // luyện tập push , indexOf,splice
+        // chữa btvn
+        
+      /*  let n = +prompt("nhập vào n : ");
+       let check = " Arr chứa toàn bộ các số từ 1 ->n";
+        let arr = [2,3,1,2,3,5,6];
+        for(i=1;i<n;i++){
+            if(arr.indexOf(i)==-1){
+                check = " Arr không chứa toàn bộ các số từ 1->n";
+                break;
+            }
+        }
+        document.write(check); 
+        */ 
+        // tối ưu 
+          /*
+        let arr =[2,3,1,2,3,5,6,5]; 
+        let max = arr[0] * arr[1];
+        for(i=0;i<arr.length;i++){
+            for(j=0;j <arr.length;j++){
+                if(max < arr[i] * arr[j] && i != j){
+                    max = arr[i] * arr[j];
+                }
+            }
+        }
+        document.write(max);
+        */
+       /*
+       let str = " tung nguyen ";
+       for(i=0;i< str.length;i++){
+        if(str[i]=="-"){
+            str[i]="_";
+        }
+        document.write(str[i]);
+       }
+       */
+      //-----------------------------------------------------------------------------
+      
+       let n = +prompt("Nhập vào sô lượng phần  tử :");
+       let arr= [];
+       for(i=0;i<n;i++){
+        let x = +prompt("Nhập vào phần tử : " + i);
+         arr.push(x);
+       }
+       
+       
+      /* for(i=0;i<arr.length;i++){
+        if(arr[i]>max){
+         arr[i] = max;
+        }
+       }
+       document.write(max );
+       */
+      
+    </script>
+</body>
+</html>

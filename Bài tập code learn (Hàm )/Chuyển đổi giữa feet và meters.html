@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><input type="text" placeholder="Nhập vào" id="nhap"> </p>
+    <button onclick="chuyendoi()">Chuyển đổi</button>
+    <p id="output"></p>
+    <script>
+         function chuyendoi(){
+       xx = +document.getElementById("nhap").value;
+       document.getElementById("output").innerHTML = xx*0.305;
+         }
+    </script>
+    <!--
+
+    -->
+    <p><input type="text" placeholder="Nhập vào" id="nhap2"> </p>
+    <button onclick="chuyendoi1()">Chuyển đổi</button>
+    <p id="out"></p>
+    <script>
+         function chuyendoi1(){
+       xx2 = +document.getElementById("nhap2").value;
+       document.getElementById("out").innerHTML = xx2*3.279;
+         }
+    </script>
+    
+</body>
+</html>

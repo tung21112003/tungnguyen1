@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Chữa bài tập kiểm tra xem một mảng có chứa  các số từ 1 ->n không.
+        /*
+       let arr = [2,3,1,2,3,5,6];
+       let n  = +prompt("Nhập vào n: ");
+       let check = true;
+       for(i=1;i<=n;i++){
+        if(arr.indexOf(i)==-1){
+            check =false;
+            break;
+        }
+       }
+       document.write(check);
+       */
+       //-----------------------------------------------------------------------------
+       // tích Max
+       /*
+       let arr = [2,3,1,2,3,5,6];
+       let max = arr[0] * arr[1];
+       for(i = 0; i <arr.length; i++){
+        for(j = 0; j <arr.length; j++){
+            if(max < arr[i] * arr[j]){
+                max = arr[i] * arr[j];
+            }
+        }
+       }
+       document.write(max);
+        */
+       //-----------------------------------------------------------------------------------
+      let n = +prompt("Nhập vào N phần tử: ");
+      
+      let arr=[];
+       for(i=0;i<=n;i++){
+        x = +prompt("Nhập vào phần tử thứ : " + i);
+        arr.push(x);
+       }
+       document.write(arr+"<br>");
+    /*   for(i=0;i<arr.length;i++){
+        for(max = 0 ;max < arr[i] ;max++){
+            if(max < arr[i]){
+               max = arr[i];
+            }
+        }
+       }
+       document.write(max); */
+       
+     
+    </script>
+</body>
+</html>

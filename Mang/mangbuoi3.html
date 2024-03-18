@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    
+     <body>
+        <script>
+            
+           // let tong =0 ;
+            // let arr = [
+             //    [1,22,3,5],
+              //   [7,6,29,22],
+               //  [55,3,9,42],
+                // [15,13,19,41],
+             //]
+             // Tính tổng đường chéo chính
+          /*   for(i=0;i<arr.length;i++){
+                 for(j=0;j<arr[i].length;j++){
+                     if(i==j){
+                         tong += arr[i][j];
+                     }
+                 }
+             }
+             document.write(tong);
+             */
+            //------------------------------------------------------------------------------------------------
+            // Tối ưu bài đường chéo chính
+            /*
+            for(i=0;i<arr.length;i++){
+                  tong +=arr[i][i];
+            }
+            document.write(tong);
+            */
+           //--------------------------------------------------------------------------------------------
+           // Tìm tổng đường chéo phụ : 5(0,3), 29(1,2) , 3 (2,1), 15(3,0)
+         /*  for(i=0;i<arr.length;i++){
+             for(j=0;j<arr[i].length;j++){
+                 if(i + j == arr.length -1){
+                     tong  += arr[i][j];
+                 }
+             }
+           }
+           */
+          //-----------------------------------------------------------------------------------------------------------
+           // tối ưu bài đường chéo phụ
+           /*
+           for(i=0;i<arr.length;i++){
+             for(j=0;j<arr[i].length;j++){
+             if(j  == arr.length -1-i){
+                 tong  += arr[i][j];
+             }
+         }
+           }
+     
+           document.write(tong);
+           */
+          //----------------------------------------------------------------------------------------------------------------
+           /*
+           let a = [1,2,3,5]
+           Thêm : a.push(10) => [1,2,3,5,10]
+           Sửa a[2] =100 ; => [1,2,100,5,10]
+           Xóa a.splice(x,y) : x là vị trí muốn xóa , y là số lượng phần tử muốn xóa
+           a.spilce(2,1) => [1,2,5,10]
+           a= [22,14,7,28,9]
+           Sử dụng a.splice(1,3)
+           =>a = [22,9]
+           a.splice(x,y,z)
+           + x là vị trí muốn xóa 
+           + y là số lượng phần tử muốn xóa
+           + z là phần tử muốn thêm
+           Tìm vị trí 
+           let a =a.indexOf(14);=> a=1
+           let b =b.indexOf(28);=> b=3
+           let c =c.indexOf(200); => c =-1 (Nếu khai báo phần tử không có trong mảng thì sẽ tự đông trả về -1)
+
+
+           */
+          </script>
+          <script>
+            //let a = [1,2,3,5,7,8,9];
+         ///   alert("Trước " +a);
+           // a.push(10);
+            //alert("Sau " +a);
+            //---------------------------------------------------
+           // a =a.indexOf(3);
+            //alert(a);
+            //---------------------------------------------------
+               // a.splice(2,3);
+
+            //a.splice(2,3,[45,36,15]);
+            //alert(a);
+            //----------------------------------------------------
+        // Nhập vào n là số lượng phần tử trong mảng
+        // Nhập vào n phần tử 
+        //IN ra mỗi phần tử trong mảng
+        /*
+        let n = +prompt("Nhập vào số lượng phần tử : ");
+        let arr=[];
+        for(i=0;i<n;i++){
+            let x = +prompt("Nhập vào phần tử thứ " +i);
+            arr.push(x);
+        }
+        for(i=0;i<arr.length;i++){
+            document.write(arr[i] + "<br>");
+
+        }
+        */
+       //----------------------------------------------------------------
+       // Nhập vào các phần tử của mảng cho đến khi nhập -1 thì dừng.
+        //In ra mỗi phần tử 1 dòng
+        // cách 1
+        /*
+         let arr = [];
+        let x ;
+         for(i=0;x!=-1;i++){
+             x = +prompt("Nhập vào phần tử thứ " + i);
+            arr.push(x);
+         
+            }
+         for(i=0;i<arr.length;i++){
+            document.write(arr[i] + "<br>");
+         }
+         */
+        // cách 2
+        /*
+        let arr = [];
+         let x ;
+         for(let i =0 ; ; i++){
+            x = +prompt("Nhập vào phần tử thứ " +i);
+            if(x == -1){
+                break;
+
+            }
+            arr.push(x);
+         }
+         for(i =0 ;i<arr.length;i++){
+            document.write("<br>"+arr[i]);
+         }
+         */
+          </script>
+     </body>
+</html>
