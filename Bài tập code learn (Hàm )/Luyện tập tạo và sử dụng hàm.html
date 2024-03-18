@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Bài 1
+        /*
+        function nhap(a,b){
+            if(a>b){
+                alert("A lớn hơn B");
+            }
+            else {
+                alert(a + b);
+            }
+        }
+        nhap(3,4);
+        nhap(1,0);
+        */
+       //--------------------------------------------
+       // Bài 3
+       
+      // function binhphuong(a){
+        //   return a*a;
+      // }
+      // alert(binhphuong(2));
+       // Bài 4
+      /* function bankinh(r){
+         alert("Dien Tich :" +r*r*3.14) ;
+        alert("Chu vi : " +2*3.14*r) ;
+       }
+      bankinh(2);
+      */
+      //Bài 5
+    /*  function factorial(x) 
+{ 
+
+  if (x === 0)
+ {
+    return 1;
+ }
+  return x * factorial(x-1);
+         
+}
+document.write(factorial(5));
+*/
+// bài 6
+/*
+   function isNumeric(char) {
+  return !isNaN(parseFloat(char)) && isFinite(char);
+}  
+alert(char(5));
+   */
+  // Bài 7
+  /*
+  function input(a,b,c){
+    return Math.min(a,b,c);
+  }
+   alert(input(1,2,3));
+  */
+ // Bài 8
+ /*
+  function input(a){
+    if(a >=0 ){
+        return true;
+    }
+    else{
+        return false;
+    }
+  }
+   alert(input(2));
+   */
+  // Bài 9
+  /*
+  function reverseString(str) {}
+  return str.split('').reverse().join('');
+}
+let str = [1,2,3,4,5,6];
+alert(reverseString(str));
+*/
+// Bài 10
+function countCharacter(arr, char) {
+  var count = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === char) {
+      count++;
+    }
+  }
+  return count > 0 ? count : -1;
+}
+var characters = ['a', 'b', 'c', 'a', 'd', 'e'];
+console.log(countCharacter(characters, 'a'));  
+console.log(countCharacter(characters, 'b'));  
+console.log(countCharacter(characters, 'z'));  
+    </script>
+
+</body>
+</html>
