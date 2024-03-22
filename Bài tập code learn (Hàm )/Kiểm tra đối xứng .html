@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(word) {
+  
+  word = word.toLowerCase().replace(/\s/g, '');
+
+  
+  if (word.length <= 1) {
+    return true;
+  }
+
+  if (word[0] === word[word.length - 1]) {
+  
+    return isPalindrome(word.slice(1, word.length - 1));
+  } else {
+    
+    return false;
+  }
+}
+
+
+var word1 = "radar";
+if (isPalindrome(word1)) {
+  console.log(word1 + " là từ đối xứng.");
+} else {
+  console.log(word1 + " không phải là từ đối xứng.");
+}
+
+// Từ không đối xứng "hello"
+var word2 = "hello";
+if (isPalindrome(word2)) {
+  console.log(word2 + " là từ đối xứng.");
+} else {
+  console.log(word2 + " không phải là từ đối xứng.");
+}
+    </script>
+</body>
+</html>
