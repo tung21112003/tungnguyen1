@@ -53,17 +53,31 @@
     */
     // BTVN
     //1.
-    function so(a){
-     if(a>=0){
-        return true;
-     }
-     else{
-        return false;
-     }
-    }
-  //  alert(so(-1));
+    function checkSNT(a){
+       let kq = true ;
+       for(let i =2 ;i<a;i++){
+         if(a %1 == 0 ){
+            kq = false;
+         }
+       }
+       return kq ;
+      }
+
+       function inNSnt(n){
+       document.write(2);
+       let a =3; 
+       let dem = 1; 
+       while (dem < n ){
+         if(inNSnt(a)){
+            document.write('<br>' + a);
+            dem ++;
+         }
+         a++;
+       }  
+       }
+       inNSnt(15); 
     
-     
+   
     </script>
 </body>
 </html>

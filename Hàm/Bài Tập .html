@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="showlist()">List</button>
+    <button onclick="showFromAdd()">Add</button>
+    <div id="disp"></div>
+
+    <SCript>
+        let ListProduct = ['Ip15','S23','Note 9'];
+        showlist()
+        //
+        function showlist(){
+            let str =  `<h1> Danh Sách Sản phẩm </h1>`
+        str += `<p> Số lượng sản phẩm : ${ListProduct.length}</p>`
+        for( let i =0 ; i <ListProduct.length ;i++){
+         str  += `<h3>${ListProduct[i]} <button onclick = "edit(${i})">Edit</button> </h3>`
+        }
+        document.getElementById('disp').innerHTML = str;
+        }
+             
+        //
+        function showFromAdd(){
+          let str = `<input id = "inp"> <button onclick="add()"> Create </button>`
+          document.getElementById('disp').innerHTML = str ;
+        }
+        //   
+        function add(){
+            listProduct.push(document.getElementById('inp').value);
+            showlist();
+        }
+        //
+        function edit(index){
+           let str = `<input id  ="inp"  value ="${ListProduct[index]}"> <button onclick = "save(${index})">Save</button>`
+           document.getElementById('disp').innerHTML = str;
+        }
+        //
+        function save (index){
+        ListProduct[index] = (document.getElementById('inp').value);
+        showlist();
+        }
+
+    
+    </SCript>
+</body>
+</html>
