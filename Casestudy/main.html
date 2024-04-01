@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Ball</title>
+</head>
+<body>
+    <center style="border-collapse: collapse;">
+    <br>
+    <img id="img" src="hinh-nen-nhom-luffy-mu-rom-3.jpg"  style="width: 1100px; height: 600px; display: none;" >
+    <img id="imglose" src="istockphoto-1325433246-640x640.jpg" style="width:1100px;height: 600px; display:none">
+    <div id="div" style="width: 1100px; height: 700px"> 
+    <canvas id="game" width="1000" height="700" style=" border:1px solid black;"></canvas>
+    <br>
+    </div>
+    <br>
+    <button onmousedown="moveleft()" onmouseup="clearMoveLeft()" style="width: 100px; height: 45px; color: black; background-color: pink; border-radius: 60px; border-collapse: collapse;" >LEFT</button>
+    <button onmousedown="moveright()" onmouseup="clearMoveRight()" style="width: 100px ; height:  45px; color: black; background-color: pink;border-radius: 60px;" >RIGHT</button>
+    <button onclick="draw()" style="width: 100px; height: 45px; color: black; background-color: pink; border-radius: 60px; "  >START</button>
+    </center>
+    <script >
+let canvas = document.getElementById('game');
+let context = canvas.getContext('2d');
+function drawPoint(){
+    context.beginPath();
+    context.font = "40px TimeNewRoman";
+    context.fillStyle="pink ";
+    context.fillText("Point: "+myPoint, 1,60 );
+    context.closePath();
+}
+
+function drawBackGroundPlay(){
+    let img=document.getElementById("img");
+    context.beginPath();
+    context.drawImage(img,0,0,canvas.width,canvas.height);
+    context.closePath();
+
+}
+
+function drawBackGroundWin(){
+    let img=document.getElementById("imgwin");
+    context.beginPath();
+    context.drawImage(img,0,0,canvas.width,canvas.height);
+    context.closePath();
+}
+function drawBackGroundLose(){
+    let img=document.getElementById("imglose");
+    context.beginPath();
+    context.drawImage(img,0,0,canvas.width,canvas.height);
+    context.closePath();
+}
+
+let ball = {
+    x: 200,
+    y: 300,
+    dx: 5,
+    dy: 5,
+    radius: 12,
+};
+let thanhChan = {
+    width: 170,
+    height: 20,
+    x: 450,
+    y: canvas.height - 10,
+    speed: 9,
+
+    diChuyenSangTrai: false,
+    diChuyenSangPhai: false,
+};
+let gameOver = false;
+let luuGiaTriCacVienGach = {
+    offsetX: 8,
+    offsetY: 6,
+    margin: 10,
+    width:60,
+    height: 30,
+    totalRow: 7,
+    totalCol: 14,
+};
+let array = [];
+for (let i = 0; i < luuGiaTriCacVienGach.totalRow; i++) {
+    for (let j = 0; j < luuGiaTriCacVienGach.totalCol; j++) {
+        array.push({
+            x: luuGiaTriCacVienGach.offsetX + j * (luuGiaTriCacVienGach.width + luuGiaTriCacVienGach.margin),
+
+            y: luuGiaTriCacVienGach.offsetY + i * (luuGiaTriCacVienGach.height + luuGiaTriCacVienGach.margin),
+            isBroken: false ,
+        });
+    }
+}
+
+
+document.addEventListener('keyup', function (event) {
+    if (event.key == 35) {
+        thanhChan.diChuyenSangTrai = false;
+    } else if (event.key== 38) {
+        thanhChan.diChuyenSangPhai = false;
+    }
+});
+document.addEventListener('keydown', function (event) {
+    if (event.key== 35) {
+        thanhChan.diChuyenSangTrai = true;
+    } else if (event.key == 38) {
+        thanhChan.diChuyenSangPhai = true;
+    }
+});
+
+function veNhieuGach() {
+    array.forEach(function (b) {
+        if(!b.isBroken){
+            context.beginPath();
+            context.rect(b.x, b.y, luuGiaTriCacVienGach.width, luuGiaTriCacVienGach.height);
+            context.fillStyle ="green";
+            context.fill();
+            context.closePath();
+        }
+
+
+    });
+}
+
+function drawBall() {
+    context.beginPath();
+    context.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+    context.fillStyle = "black";
+    context.fill();
+    context.closePath();
+}
+
+function veThanhChan() {
+    context.beginPath();
+    context.rect(thanhChan.x, thanhChan.y, thanhChan.width, thanhChan.height);
+    context.fillStyle="pink";
+    context.fill();
+    context.closePath();
+}
+
+function xuLyVaCham() {
+    if (ball.x < ball.radius || ball.x > canvas.width - ball.radius) {
+        ball.dx = -ball.dx;
+    }
+if (ball.y < ball.radius || ball.y > canvas.height - ball.radius) {
+        ball.dy = -ball.dy;
+    }
+}
+
+
+function bongVaChamVoiThanhChan() {
+    if (ball.x + ball.radius >= thanhChan.x && ball.x + ball.radius <= thanhChan.x + thanhChan.width &&
+        ball.y + ball.radius >= canvas.height - thanhChan.height) {
+        ball.dy = -ball.dy;
+    }
+}
+let myPoint=0;
+function bongVaChamGach() {
+    array.forEach(function (b) {
+        if (!b.isBroken) {
+            if (ball.x >= b.x && ball.x <= b.x + luuGiaTriCacVienGach.width &&
+                ball.y + ball.radius >= b.y && ball.y - ball.radius <= b.y + luuGiaTriCacVienGach.height) {
+                ball.dy = -ball.dy;
+                ball.dy+=0.01;
+                luuGiaTriCacVienGach.height+=0;
+                console.log(luuGiaTriCacVienGach.totalRow);
+                console.log(ball.dy);
+                console.log(ball.dx);
+                b.isBroken = true;
+                let sound = new Audio();
+              
+                sound.volume=1;
+                sound.play();
+                myPoint++;
+            }
+        }
+    });
+}
+
+function toaDoBong() {
+    ball.x += ball.dx;
+    ball.y += ball.dy;
+}
+
+function moveleft() {
+    thanhChan.diChuyenSangTrai = true;
+}
+function clearMoveLeft() {
+    thanhChan.diChuyenSangTrai = false;
+}
+function moveright() {
+    thanhChan.diChuyenSangPhai = true;
+}
+function clearMoveRight() {
+    thanhChan.diChuyenSangPhai = false;
+}
+function updateThanhChan() {
+    if (thanhChan.diChuyenSangTrai) {
+        thanhChan.x -= thanhChan.speed;
+    } else if (thanhChan.diChuyenSangPhai) {
+        thanhChan.x += thanhChan.speed;
+    }
+    if (thanhChan.x < 0) {
+        thanhChan.x = 0;
+    } else if (thanhChan.x > canvas.width - thanhChan.width) {
+        thanhChan.x = canvas.width - thanhChan.width;
+    }
+
+}
+
+function checkGameOver() {
+    if (ball.y > canvas.height - ball.radius || luuGiaTriCacVienGach.width*luuGiaTriCacVienGach.totalRow===canvas.height) {
+
+        gameOver = true;
+    }
+
+}
+
+function showGameOver() {
+
+    drawBackGroundLose();
+}
+function showWin() {
+    if(myPoint>=100){
+        
+        alert("WINNER");
+    }
+}
+drawBackGroundPlay();
+veNhieuGach();
+drawBall();
+veThanhChan();
+drawPoint();
+function draw() {
+    if (!gameOver) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        drawBackGroundPlay();
+        veNhieuGach();
+        drawBall();
+        veThanhChan();
+        updateThanhChan();
+        xuLyVaCham();
+        toaDoBong();
+        bongVaChamGach();
+        drawPoint();
+        showWin();
+        bongVaChamVoiThanhChan();
+        checkGameOver();
+        requestAnimationFrame(draw);
+
+    } else {
+        showGameOver();
+    }
+}
+    </script>
+</body>
+</html>

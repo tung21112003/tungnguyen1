@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Đối tượng
+        /*
+        let a ={
+            name:'tung' ,
+            ager:18 ,
+            isPoor: true ,
+            address: 'TB'
+        } 
+        alert(a["ager"]);
+        alert(a.address);
+        */
+  //    Đối tượng
+  /*
+  let a = {
+    name: "A",
+    point: 8,
+    xephang:"Khá",
+  }
+  let b = {
+    name : "B",
+    point:10,
+    xephang:"Giỏi",
+  }
+  
+    alert(a["point"]);
+    alert(a.xephang);
+    alert(b["point"]);
+    alert(b.xephang);
+    */
+   //Lớp
+   /*
+   class Student {
+    constructor(name,age,score){
+        this.name= name;
+        this.score=score;
+        this.age = age;
+    }
+    f2(){
+        alert(this.name + this.score +  this.age);
+    }
+   }
+    let s1 = new Student ("ABC" , 20, 10);
+    let s2 = new Student("CDEF" ,20 ,8);
+    s1.f2();
+    s2.f2();
+      
+  */
+
+     class sp {
+        constructor(id ,name , price , quantity ){
+            this.id = id;
+            this.name = name;
+            this.price = price;
+            this.quantity=quantity;
+        }
+    getI4(){
+     alert(this.id + " , " + this.name + " , "  + this.price + " , " + this.quantity );
+    }
+     }
+      let sp1 = new sp(1, "huy", 200.000, 100);
+      let sp2 = new sp(2, "quang", 150.000, 120); 
+  sp1.getI4();
+  sp2.getI4();
+    </script>
+</body>
+</html>

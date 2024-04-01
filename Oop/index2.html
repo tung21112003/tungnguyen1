@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var " dùng trong function scope"
+        // let , const : blovk scope{}
+        //scpoe" phạm vi sử dụng biến ( biến có giá trị)
+      function f1(){
+        if(true){
+            if(true){
+                let x = 10 ;
+                var y =20 ;
+            }
+            alert(y+ "y");
+            alert(x+ "x");
+        }
+      }
+    </script>
+</body>
+</html>

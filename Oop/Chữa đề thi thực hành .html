@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Câu 1
+        function findAvg(arr){
+            let sum = 0 ;
+         
+            for( let i = 0 ; i< arr.length ; i++){
+                sum += arr[i];
+            }
+            return sum/arr.length;
+        }
+        // Câu 2
+        
+        function insertNumberToArray(ar, x, index){
+              if(index< 0 || index > arr.length ){
+                return arr ;
+
+              }
+              arr.splice(index , 0 ,x);
+        }
+        
+        // Câu 3
+        function isPrime(a){
+            if(a==2){
+                return true ;
+            }
+            if(a<2){
+                return false ;
+            }
+            for(let i = 2 ;i <=a ;i++){
+                if(a % i == 0  ){
+                    return false ;
+                }
+            }
+            return true ;
+        }
+        function sumOflistPrime(x){
+            let sum = 0;
+            for(i = 0 ;i < x.length ; i++){
+                
+                   sum += i;
+
+            }
+            return sum;
+        }
+        // Câu 4
+        class hcn {
+            constructor (x , y ,height ,wight , color , render){
+                this.x = x;
+                this.y = y;
+                this.height = height ;
+                this.wight = wight ;
+                this.color = color;
+                this.render = render ;
+            }
+            render(){
+              
+            }
+        }
+    </script>
+   <canvas id="game" width="800" height="600" style="border: 3px solid #000000"></canvas>
+</body>
+</html>
