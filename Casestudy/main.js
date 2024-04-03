@@ -6,6 +6,7 @@ let ball = {
     dx: 5,
     dy: 5,
     radius: 12,
+    speed:6 ,
 };
 let Bars = {
     width: 220,
@@ -62,7 +63,6 @@ let img=document.getElementById("imgwin");
     context.drawImage(img,0,0,canvas.width,canvas.height);
     context.closePath();
 }
-
 function veNhieuGach() {
     array.forEach(function (b) {
         if(!b.isBroken){
