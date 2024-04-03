@@ -1,30 +1,5 @@
 let canvas = document.getElementById('game');
 let context = canvas.getContext('2d');
-function drawPoint(){
-    context.beginPath();
-    context.font = "40px TimeNewRoman";
-    context.fillStyle="pink ";
-    context.fillText("Point: "+myPoint, 1,60 );
-    context.closePath();
-}
-function drawBackGroundPlay(){
-    let img=document.getElementById("img");
-    context.beginPath();
-    context.drawImage(img,0,0,canvas.width,canvas.height);
-    context.closePath();
-}
-function drawBackGroundLose(){
-    let img=document.getElementById("imglose");
-    context.beginPath();
-    context.drawImage(img,0,0,canvas.width,canvas.height);
-    context.closePath();
-}
-function drawBackGroundWin(){
-    let img=document.getElementById("imgwin");
-    context.beginPath();
-    context.drawImage(img,0,0,canvas.width,canvas.height);
-    context.closePath();
-}
 let ball = {
     x: 200,
     y: 300,
@@ -33,14 +8,13 @@ let ball = {
     radius: 12,
 };
 let Bars = {
-    width: 120,
+    width: 220,
     height: 15,
     x: 450,
     y: canvas.height - 9,
     speed: 8,
-
-    diChuyenSangTrai: false,
-    diChuyenSangPhai: false,
+    MoveLeft: false,
+    MoveRight: false,
 };
 let gameOver = false;
 let KichThuocVienGach = {
@@ -50,7 +24,7 @@ let KichThuocVienGach = {
     width:60,
     height: 30,
     totalRow: 7,
-    totalCol: 14,
+    totalCol: 17,
 };
 let array = [];
 for (let i = 0; i < KichThuocVienGach.totalRow; i++) {
@@ -63,20 +37,32 @@ for (let i = 0; i < KichThuocVienGach.totalRow; i++) {
         });
     }
 }
-document.addEventListener('keyup', function (event) {
-    if (event.key == 35) {
-        Bars.diChuyenSangTrai = false;
-    } else if (event.key== 38) {
-        Bars.diChuyenSangPhai = false;
-    }
-});
-document.addEventListener('keydown', function (event) {
-    if (event.key== 35) {
-        Bars.diChuyenSangTrai = true;
-    } else if (event.key == 38) {
-        Bars.diChuyenSangPhai = true;
-    }
-});
+function drawPoint(){
+    context.beginPath();
+    context.font = "40px TimeNewRoman";
+    context.fillStyle="pink";
+    context.fillText("Point: "+myPoint, 1,60 );
+    context.closePath();
+}
+function drawBackGroundPlay(){
+let img=document.getElementById("img");
+    context.beginPath();
+    context.drawImage(img,0,0,canvas.width,canvas.height);
+    context.closePath();
+}
+function drawBackGroundLose(){
+let img=document.getElementById("imglose");
+    context.beginPath();
+    context.drawImage(img,0,0,canvas.width,canvas.height);
+    context.closePath();
+}
+function drawBackGroundWin(){
+let img=document.getElementById("imgwin");
+    context.beginPath();
+    context.drawImage(img,0,0,canvas.width,canvas.height);
+    context.closePath();
+}
+
 function veNhieuGach() {
     array.forEach(function (b) {
         if(!b.isBroken){
@@ -91,7 +77,7 @@ function veNhieuGach() {
 function drawBall() {
     context.beginPath();
     context.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
-    context.fillStyle = "black";
+    context.fillStyle = "red";
     context.fill();
     context.closePath();
 }
@@ -110,6 +96,20 @@ if (ball.y < ball.radius || ball.y > canvas.height - ball.radius) {
         ball.dy = -ball.dy;
     }
 }
+document.addEventListener('keyup', function (event) {
+    if (event.key == 35) {
+        Bars.MoveLeft = false;
+    } else if (event.key== 38) {
+        Bars.MoveRight = false;
+    }
+});
+document.addEventListener('keydown', function (event) {
+    if (event.key== 35) {
+        Bars.MoveLeft = true;
+    } else if (event.key == 38) {
+        Bars.MoveRight = true;
+    }
+});
 function bongVaChamVoiBars() {
     if (ball.x + ball.radius >= Bars.x && ball.x + ball.radius <= Bars.x + Bars.width &&
         ball.y + ball.radius >= canvas.height - Bars.height) {
@@ -142,21 +142,21 @@ function toaDoBong() {
     ball.y += ball.dy;
 }
 function moveleft() {
-    Bars.diChuyenSangTrai = true;
+    Bars.MoveLeft = true;
 }
 function clearMoveLeft() {
-    Bars.diChuyenSangTrai = false;
+    Bars.MoveLeft = false;
 }
 function moveright() {
-    Bars.diChuyenSangPhai = true;
+    Bars.MoveRight = true;
 }
 function clearMoveRight() {
-    Bars.diChuyenSangPhai = false;
+    Bars.MoveRight = false;
 }
 function updateBars() {
-    if (Bars.diChuyenSangTrai) {
+    if (Bars.MoveLeft) {
         Bars.x -= Bars.speed;
-    } else if (Bars.diChuyenSangPhai) {
+    } else if (Bars.MoveRight) {
         Bars.x += Bars.speed;
     }
     if (Bars.x < 0) {
