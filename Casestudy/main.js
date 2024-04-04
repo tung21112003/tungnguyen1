@@ -176,7 +176,7 @@ function showGameOver() {
 }
 function showWin() {
     if(myPoint>=100){
-        alert("Winner");
+    drawBackGroundWin();
     }
 }
 drawBackGroundPlay();
