@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+      Position Css: static ,relative, absolute ,fixed ,stick     
+     ca top , left ,right  
+    --  static : Là giá trị mặc định ( không đi cùng được top , left ,right ,bottom)
+     giữ nguyên định dạng ở vị trí ban đầu
+     Khi dịch chuyển position relative sẽ dịch chuyển so với vị trí ban đầu của nó và giữ nguyên 
+     relative
+     --c
+     --  Khi sử dụng postion absolute dịch chuyển dựa trên phần tử cha gần nhất có sử dụng thuộc  postion( khác static )
+     Nếu không có thì sẽ dịch chuyển dựa trên thẻ <html>
+     -- fixed : có tác dụng cố định 1 phần tử tại vị trí nào đó so với web
+    -->
+     <style>
+        .container{
+            width: 100% ;
+            height: 500px;
+            background-color: blue;
+        }
+        .block{
+            width: 100%;
+            height: 50px;
+
+        }
+        .block-1{
+            background-color: red;
+            position: relative;
+        } 
+        .block-2{
+            background-color: brown;
+            position: absolute;
+            
+        }
+        .block-3{
+            background-color: black;
+            position: fixed;
+            top : 0;
+            height: 65px    ;
+        }
+        .block-4{
+            background-color :pink;
+         position:sticky;
+        }
+     </style>
+     
+     <div class="container">
+        <div class="block-1 block">A</div>
+        <div class="block-2 block">B</div>
+        <div class="block-3 block">C</div>
+        <div class="block-4 block">D</div>
+     </div>
+</body>
+</html>

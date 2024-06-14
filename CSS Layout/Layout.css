@@ -1,0 +1,140 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    height: 140px;
+   display: flex;
+    margin-bottom: 5px;
+}
+.logo{
+    width: 25%;
+    height: 100%;
+    border: 1px solid;
+    margin-right: 5px;
+
+}
+.banner{
+    width: 75%;
+    height: 100%;
+    border: 1px solid;
+}
+.nav-bar{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    margin-bottom: 5px;
+}
+.main{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    margin-bottom: 5px;
+}
+.left{
+    width: 20%;
+    height: 100%;
+    margin-right: 5px;
+}
+.above{
+    width: 100%;
+    height: 35%;
+    border: 1px solid; 
+    margin-bottom: 9px;
+}
+.below{
+    width: 100%;
+    height: 65%;
+    border: 1px solid;
+    margin-bottom: 5px;
+}
+.center{
+    width: 60%;
+    height: 100%;
+    margin-right: 3px;
+}
+.top{
+    width: 100%;
+    height: 30%;
+   display: flex;
+   margin-bottom: 8px;
+}
+.topleft{
+   width: 50%;  
+   height: 100%;
+   border: 1px solid;
+  margin-right: 5px;
+}
+.topright{
+    width: 50%;
+    height: 100%;
+    border: 1px solid;
+}
+.mid{
+   width: 100%;
+   height: 70%;
+}
+.mid1{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    margin-bottom: 8px;
+    
+}
+.midleft1{
+    width: 33%;
+    height: 100%;
+    border: 1px solid;
+    margin-right: 5px;
+}
+.midcenter1{
+    width: 33%;
+    height: 100%;
+    border: 1px solid;
+    margin-right: 5px;
+}
+
+.midright1{
+    width: 33%;
+    height: 100%;
+    border: 1px solid;
+}
+.mid2{
+    width: 100%;
+    height: 45%;
+    display: flex;
+
+}
+.midleft2{
+    width: 33%;
+    height: 100%;
+    border: 1px solid;
+    margin-right: 5px;
+}
+.midcenter2{
+    width: 33%;
+    height: 100%;
+    border: 1px solid;
+    margin-right: 5px;
+}
+
+.midright2{
+    width: 33%;
+    height: 100%;
+    border: 1px solid;
+}
+.right{
+    width: 20%;
+    height: 100%;
+    margin-left: 5px;
+    border: 1px solid;
+   
+}
+
+.footer{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+}

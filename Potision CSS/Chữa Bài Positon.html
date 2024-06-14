@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <!--
+  z-index : Thay đổi  Độ ưu tiên positon -->
+<body>
+ 
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .nav-bar {
+            height: 80px;
+            width: 100%;
+            background-color: wheat;
+
+        }
+
+        .main {
+            height: 500px;
+           
+            position: relative;
+        }
+        .img{
+            width: 100%;
+            height: 100%;
+        }
+        .description{
+            width: 25%;
+            height: 100%;
+            position: absolute;
+            background-color: red;
+            top : 0 ;
+        }
+    </style>
+    <div class="container">
+        <div class="nav-bar"></div>
+        <div class="main">
+            <div class="img"> 
+                <img src="https://tse2.mm.bing.net/th?id=OIP.CI-X3W0hVRl6_wD1BJw0BgHaEK&pid=Api&P=0&h=220" alt=""> </div>
+            <div class="description"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
