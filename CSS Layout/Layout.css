@@ -23,8 +23,9 @@
 .nav-bar{
     width: 100%;
     height: 50px;
-    border: 1px solid;
+    padding-right: 10px 0;
     margin-bottom: 5px;
+    display: flex;
 }
 .main{
     width: 100%;
@@ -137,4 +138,22 @@
     width: 100%;
     height: 50px;
     border: 1px solid;
+}
+.nav-bar .left{
+    height: 100%;
+    width: 50%;
+    border: 1px solid;
+    display: flex;
+}
+.nav-bar .right{
+    height: 100%;
+    width: 50%;
+    border: 1px solid;
+  
+}
+.nav-bar .left .item{
+    width: auto;
+    height: 100%;
+  text-align: center;
+   border-left: 1px solid;
 }
