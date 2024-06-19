@@ -157,3 +157,10 @@
   text-align: center;
    border-left: 1px solid;
 }
+
+@media only Screen and (max-width: 900px){
+    body{
+        background-color:red;
+    }
+}
+

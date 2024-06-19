@@ -1,0 +1,178 @@
+*{
+margin: 0;
+box-sizing: border-box;
+}
+
+.header {
+width: 100%;
+height: 140px;
+}
+
+.nav-bar {
+height: 50px;
+width: 100%;
+border: 1px solid black;
+margin-top: 5px;
+padding: 8px 0;
+}
+
+.main {
+height: 500px;
+width: 100%;
+margin-top: 5px;
+}
+
+
+.footer {
+height: 50px;
+width: 100%;
+border: 1px solid black;
+margin-top: 5px;
+}
+
+.header .logo {
+width: 25%;
+height: 100%;
+border: 1px solid red;
+float: left;
+}
+
+.header .banner {
+width: calc(75% - 5px);
+height: 100%;
+border: 1px solid red;
+float: left;
+margin-left: 5px;
+}
+
+/* 75% + 25% + 5px */
+
+
+.main .left {
+width: 10%;
+height: 100%;
+float: left;
+}
+
+.main .mid {
+width: calc(75% - 5px - 5px);
+height: 100%;
+float: left;
+margin: 0 5px;
+}
+
+.main .right {
+width: 15%;
+height: 100%;
+border: 1px solid black;
+float: left;
+}
+
+.left .top-menu {
+width: 100%;
+height: 40%;
+border: 1px solid black;
+}
+
+.left .bottom-menu {
+width: 100%;
+height: 35%;
+border: 1px solid black;
+margin-top: 6px;
+}
+
+.mid .ads {
+width: 100%;
+height: 150px;
+}
+
+
+.mid .list {
+margin-top: 5px;
+width: 100%;
+height: 300px;
+overflow: scroll;
+}
+
+.mid .ads .news {
+width: 50%;
+height: 100%;
+border: 1px solid black;
+float: left;
+
+}
+
+.mid .ads .slide {
+width: calc(50% - 5px);
+height: 100%;
+border: 1px solid black;
+float: left;
+margin-left: 5px;
+}
+
+
+.mid .list .item {
+height: 130px;
+width: calc(100% / 3 - 10px);
+border: 1px solid black;
+float: left;
+margin: 5px 5px;
+}
+
+
+.nav-bar .left {
+height: 100%;
+width: 50%;
+float: left;
+}
+
+.nav-bar .right {
+height: 100%;
+width: 50%;
+float: left;
+padding-right: 10px;
+padding-top: 5px;
+}
+
+.nav-bar .left .item {
+width: 12%;
+height: 100%;
+border-left: 1px solid green;
+float: left;
+text-align: center;
+padding-top: 5px;
+/* Khi cách phần tử so với viền
+của cha nó hãy nghĩ tới padding */
+}
+
+.nav-bar .right input {
+float: right;
+}
+
+@media only screen and (max-width:900px){
+   
+    .main .left{
+        display: none;
+    }
+    .main .mid{
+        width: (85%-5px-5px);
+    }
+    .mid .list .item{
+        width: calc(100% / 2 - 10px);
+    }
+    .mid .list{
+        overflow: scroll;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .main.right{
+        display: none;
+    }
+    .main .mid{
+        width:100% ;
+    }
+    .mid .list .item{
+        width:calc(100%-10px);
+    }
+}  
