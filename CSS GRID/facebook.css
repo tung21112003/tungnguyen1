@@ -33,8 +33,9 @@
     height: 70%;
     margin: 10px 5px;
     border-radius: 20px;
-    text-align: center;
-    background-color: rgb(201, 166, 166);
+    padding-left: 10px;
+    text-align: left;
+    background-color: rgb(212, 205, 205);
 
     
 }
@@ -244,7 +245,8 @@
     border-radius: 30px;
     margin-left: 5px;
     margin-top: 10px;
-    text-align: center;
+    text-align: left; 
+    padding-left: 10px;
 }
 .mid .itembottom{
     width: 100%;
