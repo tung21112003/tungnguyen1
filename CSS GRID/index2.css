@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+.container{
+    display: grid;
+    height: 100vh;
+    /*Độ cao full màn hình*/
+    /*fr chiếm các phần */
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 2fr 1fr 100px;
+    grid-template-areas: 
+    "header header"
+    "side-bar content"
+    "side-bar ads"
+    "footer footer";
+}
+.header{
+    grid-area: header;
+    background-color: aqua;
+
+}
+.side-bar{
+    grid-area: side-bar;
+    background-color: pink;
+}
+.content{
+    grid-area: content;
+    background-color: blue;
+}
+.ads{
+    grid-area: ads;
+    background-color: brown;
+}
+.footer{
+    grid-area: footer;
+    background-color: blueviolet;
+}

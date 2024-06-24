@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: auto;
+   
+}
+.header{
+    background-color: rgb(44, 40, 40);
+    width: 100%;
+    height: 70px;
+    display: flex;
+}
+.header .left{
+    width: 35%;
+    height: 100%;
+    display: flex;
+}
+.left .icon{
+    width: 10%;
+    height: 100%;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 12px;
+    color: blue  ;
+
+}
+.left .item input{
+    width: 300px;
+    height: 70%;
+    margin: 10px 5px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgb(201, 166, 166);
+
+    
+}
+.header .center{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    
+}
+.center .item{
+    width: 25%;
+    height:100% ;
+    font-size: 25px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 20px;
+    color: rgb(136, 122, 122);
+}
+.header .center  :hover{
+ background-color: antiquewhite;
+
+}
+
+.header .right{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+ .header .right :hover{
+    background-color: antiquewhite;   
+    border-radius: 10%;
+    
+}
+.header .right .item{
+     width: 50px;
+     height:50px;
+     background-color: rgb(213, 237, 237);
+     text-align: center;
+     margin: 5px;
+     border-radius: 50%;
+     font-size: 20px;
+     padding-top: 15px;
+     color: rgb(136, 122, 122);
+}
+
+.main{
+    background-color: rgb(33, 31, 31);
+    width: 100%;
+    height: 1500px;
+    display: flex;
+}
+.main .left{
+    width:25% ;
+    height: 100%;
+ 
+}
+.main .center{
+    width: 40%;
+    height: 100%;
+   
+    margin-left: 150px;
+    margin-right: 150px ;
+}
+.main .right{
+    width: 25%;
+    height: 100%;
+}
+.left .left-1{
+    width: 100%;
+    height: 100%;
+}
+.left-1 .item{
+    width:100%;
+    height:calc(100% / 4- 10px);
+    display: flex;
+}
+.item .icon{
+    width: 20%;
+    height: 100%;
+    color: aliceblue;
+    font-size: xx-large;
+    padding-right: 5px;
+    margin-bottom: 5px;   
+}
+.item .name{
+    width: 80%;
+    height: 100%;
+    font-size: larger;
+    font-size: x-large;
+    padding-top: 10px;
+    color: aliceblue;
+}
+.left-1 :hover{
+    background-color: rgb(154, 154, 154);
+    border-radius: 10px;
+} 
+.div hr{
+    margin-top: 10px;
+    border: 1px solid;
+    border-color: rgb(77, 74, 70);
+    margin-bottom: 10px;
+}
+.shortcut{
+    font-size: x-large;
+    color: rgb(118, 114, 114);
+}
+.shortcut :hover{
+    background-color: rgb(60, 57, 57);
+}
+.right .right-1{
+    width: 100%;
+    height: 5%;
+}
+.right-1 .item{
+    padding-top: 5px;
+    width:100%;
+    height:100%;
+    display: flex;
+}
+.right-1 .icon{
+    width: 30%;
+    height: 100%;
+    color: aliceblue;
+    font-size: xx-large;
+    padding-right: 5px;
+    margin-bottom: 5px;
+}
+.right-1 .name {
+    width: 70%;
+    height: 100%;
+    text-align: left;
+}
+.right-1 :hover{
+    background-color: rgb(154, 154, 154);
+    border-radius: 10px;
+}
+.contacts{
+    display: flex;
+    font-size:x-large; 
+    margin-top:px ;
+    margin-bottom:3px ;
+}
+.contacts .contacts-1{
+     font-size: xx-large;
+     padding-left: 3px;
+     padding-right: 50%;
+     color: rgb(118, 114, 114);
+}
+.contacts .search{
+    font-size: x-large;
+    margin-top: 5px;
+    padding-left: 3px;
+    padding-right: 20px;
+    color: rgb(118, 114, 114);
+}
+.contacts .option{
+    font-size: x-large;
+    margin-top: 5px;
+    padding-left: 3px;
+    padding-right: 20px;
+    color: rgb(118, 114, 114);
+}
+.main .center .top {
+    width: 100%;
+    height: 17%;
+    display: flex;
+    margin-top: 10px;
+}
+.main .center .top .item {
+    width: 25%;
+    height: 100%;
+    margin: 2px;
+    border: 1px solid;
+    margin-top: 3px;
+    color: rgb(5, 5, 5);
+    background-color: rgb(60, 59, 59);
+}
+.mid {
+    margin-top: 20px;
+    width: 100%;
+    height: 10%;
+   background-color: rgb(60, 59, 59);
+   border-radius: 10px;
+   border: 1px solid;
+   
+}
+.mid .itemtop{
+   width: 100%;
+   height: 50%;
+   display: flex; 
+   
+
+}
+.mid .itemtop .icon{
+    width: 10%;
+    height: 100%;
+   font-size: 250%;
+   text-align: right;
+   padding-top: 15px;
+   padding-right: 3px;
+   color: aliceblue;
+}
+.mid .itemtop .input input{
+    width: 520px;
+    height: 70%;
+    border-radius: 30px;
+    margin-left: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+.mid .itembottom{
+    width: 100%;
+    height: 50px;
+    display: flex;   
+}
+.mid .itembottom .item1{
+    width: calc(100% /3);
+    height: 100%;
+    display: flex;
+    color: aliceblue;
+}
+.mid .itembottom .item2{
+    width: calc(100% /3);
+    height: 100%; 
+    color: aliceblue;
+    display: flex;
+}
+.mid .itembottom .item3{
+    width: calc(100% /3);
+    height: 100%;  
+    display: flex;
+    color: aliceblue;
+}
+.item1 .icon{
+    width: 20%;
+    height: 100%;
+    font-size: x-large;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+.item2 .icon{
+    width: 20%;
+    height: 100%;
+    font-size: x-large;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+
+.item3  .icon{
+    width: 20%;
+    height: 100%;
+    font-size: x-large;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+.item1 .live{
+    width: 80%;
+    height: 100%;
+    padding-top: 5px;
+    font-size: x-large;
+}
+
+.item2 .photo{
+    width:860%;
+    height: 100%;
+    padding-top: 5px;
+    font-size: x-large;
+}
+.item3 .Feelling{
+    width: 80%;
+    height: 100%;
+    padding-top: 5px;
+    font-size: x-large;
+}
+
+.center .footer{
+    width: 100%;
+    height: 40%;
+    border: 1px solid;
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: rgb(60, 59, 59);
+    
+}
