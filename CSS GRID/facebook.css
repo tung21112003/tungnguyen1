@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.container{
+.container-fluid{
     width: 100%;
     height: auto;
    
@@ -43,6 +43,7 @@
     width: 30%;
     height: 100%;
     display: flex;
+
     
 }
 .center .item{
@@ -91,7 +92,7 @@
 .main .left{
     width:25% ;
     height: 100%;
- 
+    overflow-y:scroll;
 }
 .main .center{
     width: 40%;
@@ -322,3 +323,4 @@
     background-color: rgb(60, 59, 59);
     
 }
+
