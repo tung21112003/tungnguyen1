@@ -17,6 +17,7 @@
     width: 30%;
     height: 100%;
     display: flex;
+    margin-right: 20px;
 }
 .nav-bar .left .logo{
     width: 15%;
@@ -27,6 +28,12 @@
     justify-content: center;
     align-items: center ;
 }
+.nav-bar .left .task {
+    position: absolute;
+    right: 89.5pc;
+    top: 1pc;
+    color: gray;
+}
 .nav-bar .left .search{
   width: 85%;
   height: 100%;
@@ -36,7 +43,7 @@
     height: 80%;
     margin-top: 5px;
     border: none;
-    padding-left: 10px;
+    padding-left: 35px;
     border-radius: 20px;
    background-color: rgb(231, 233, 234);
 }
@@ -68,7 +75,7 @@
    height: 100%;
    display: flex;
    justify-content: flex-end;
-
+   margin-right: 20px;
 }
 .nav-bar .right .item{
     width: 40px;
@@ -98,9 +105,6 @@
     display: flex;
     padding-top: 60px;
    background-color: rgb(231, 233, 234);
-  
-    
-    
 }
 .main .sidebar-left{
     width: 25%;
@@ -179,7 +183,9 @@
    color: gray;
    padding-left: 10px;
    margin-bottom: 10px;
+   width: 70%;
 }
+
 .left-bottom .frame{ 
     width: 100%;
     height: 60px; 
@@ -224,6 +230,19 @@
     font-size: larger;
     color: grey;
     height: 50px;
+    display: flex;
+}
+
+.right-top .sponsored{
+    width: 30%;
+    height: 100%;
+}
+.right-top .item-spon{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    padding-right: 15px;
 }
 .sidebar-right .right-mid{
     width: 100%;
@@ -344,6 +363,21 @@
     display: flex;
     border-radius: 10px;
 }
+.content-header .plus{
+    position :absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% ;
+     font-size: 30px;
+     right: 32pc;
+     top: 10.7pc;
+     background-color:white;
+     color: blue;
+     padding:5px;
+     margin: 0;
+
+}
 .content-header .item .create-new{
     width: 100%;
     height: 20%;
@@ -354,6 +388,7 @@
     background-color: white;
     border-end-start-radius: 10px;
      border-end-end-radius: 10px;
+    
 }
 .content-header .item .image {
     width: 100%;
@@ -366,10 +401,40 @@
   border-end-start-radius: 4px;
   border-end-end-radius: 4px;
 }
-.content-header  :hover{
-        background-color: rgb(242, 239, 236);
-        border-radius: 10px;
-        padding: 0.5px ;
+
+.image-icon{
+    position: relative;
+}
+.content-header .item .circle{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: rgb(0, 106, 255);
+}
+
+.content-header .item .arrow{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    position: absolute;
+    color: gray;
+    top: 5pc;
+    right: 0.5pc;
+}
+.content-header .item .ten{
+    color: white;
+    position: relative;
+    bottom: 1.6pc;
+    left: 0.6pc;
 }
 .content-mid {
     padding: 10px;
@@ -385,17 +450,19 @@
     display: flex;
 }
 .content-mid .ads1 img{
-    width: 40px;
-    width: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
-    margin: 2px;
-
+    margin-bottom: 5px;
+    margin-left: 10px;
+     
 }
 .content-mid .ads1 input{
-    width:500px;
+    width:520px;
     font-size: 15px;
     height: 70%; 
     margin-left: 10px;
+    padding-left: 10px;
     display: flex;
     background-color: rgb(191, 191, 191);;
 }
@@ -414,15 +481,10 @@
     height: 100%;
     display: flex;
 }
-.content-mid .ads1   :hover{
-    background-color: rgb(242, 239, 236);
-    border-radius: 50px;
 
-}
 .content-mid .ads2  :hover{
     background-color: rgb(242, 239, 236);
     border-radius: 10px;
-    
 }
 .ads2 .meme .icon{
     width: 20%;
@@ -453,6 +515,7 @@
     width: 100%;
     height: 90px;
 }
+
 .data .header{
     width: 100%;
     height: 50%;
@@ -551,6 +614,7 @@
     width: 100%;
     height: 50%;
     display: flex;
+    padding-bottom: 20px;
 }
 .data .interact .like{
      width: calc(100% /3 );
@@ -596,7 +660,7 @@
    background-color: white;
     padding: 10px;
 }
-.content-footer .data{
+.content-footer1 .data{
     width: 100%;
     height: 90px;
 }
@@ -698,6 +762,7 @@
     width: 100%;
     height: 50%;
     display: flex;
+    padding-top: 20px;
 }
 .data .interact .like{
      width: calc(100% /3 );
@@ -732,6 +797,166 @@
     display: flex;
     color: gray;
 }
+
+.content-footer2{
+    width: 100%;
+    height: 800px;
+    margin-top: 15px;
+    border-radius: 10px;
+   background-color: white;
+    padding: 10px;
+}
+.content-footer2 .data{
+    width: 100%;
+    height: 90px;
+}
+.data .header{
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+.data .header img{
+    width: 40px;
+    height: 40px ;
+    border-radius: 50%;
+    margin: 2px;
+}
+.data .header .name{
+   width: 90%;
+   height: 100%;
+   font-size: larger;
+   padding-top: 5px;
+   padding-left: 4px;
+
+}
+.data .header .icon1{
+    width: 8%;
+    height: 100%;
+    display: flex;
+    font-size: larger;
+    justify-content: flex-end;
+    padding-top: 10px;
+    color: grey;
+}
+.data .header1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    padding-top: 5px;
+}
+.data .header1 .area1{
+    width: 50%;
+    height: 100%;
+}
+.data .header1 .icon1{
+    width: 73%;
+    height: 100%;
+    font-size: large;
+}
+.data .image {
+    width: 100%;
+    height: 600px;
+}
+.data .image img {
+    width: 100%;
+    height: 100%;
+}
+.data .comment {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+.data .comment .icon2{
+    width: 5%;
+    height: 100%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+}
+.data .comment .number{
+    width: 50%;
+    height: 100%;
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.icon-comment{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: gray;
+}
+.icon-share{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: gray;
+}
+.hr3 hr{
+    border: 1px solid;
+    color: rgb(215, 213, 213);
+    width: 100%;
+}
+.data .interact{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    padding-top: 20px;
+}
+.data .interact .like{
+     width: calc(100% /3 );
+     height: 100%;
+     display: flex;
+}
+.data .interact .binhluan{
+    width: calc(100% /3 );
+    height: 100%;
+    display: flex;
+}
+.data .interact .share{
+    width: calc(100% /3 );
+    height: 100%;
+    display: flex;
+}
+.icon3{
+    width: 15%;
+    height: 100%;
+    justify-content: center;
+    font-size: larger;
+    align-items: center;
+    display: flex;
+    color: gray;
+    margin-left: 50px;
+}
+.like-like{
+    width: 75%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
