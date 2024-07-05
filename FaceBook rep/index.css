@@ -85,7 +85,7 @@
     align-items: center;
     font-size: 20px ;
     border-radius: 50%;
-    padding: 3px;
+    padding: 1px;
     margin: 5px;
     background-color: rgb(222, 226, 230);
 }
@@ -120,6 +120,7 @@
     background-color: rgb(198, 193, 193);
     border-radius: 30px;
 }
+
 .main .content{
     width: 40%;
     height: 1000px;
@@ -278,7 +279,7 @@
 .hr1 hr{
     border: 1px solid;
     color: rgb(215, 213, 213);
-    width: 90%;
+    width: 95%;
     
 }
 .people{
@@ -300,7 +301,7 @@
  justify-content: center;
  align-items: center;
  text-align: right;
- margin-right: 20px;
+ margin-left: 20px;
 }
 .contact3 {
     width: 10%;
@@ -412,7 +413,7 @@
     margin: 10px;
     padding: 3px;
     border-radius: 50%;
-    background-color: rgb(0, 106, 255);
+    background-color: rgb(0, 119, 255);
 }
 
 .content-header .item .arrow{
