@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <button onclick="output()">nhap</button>
+    <script>
+        function output() {
+            let input1 = +document.getElementById("input1").value;
+            let input2 = +document.getElementById("input2").value;
+            let tong = input1 + input2;
+            alert(tong);
+        }
+
+    </script>
+</body>
+
+</html>
